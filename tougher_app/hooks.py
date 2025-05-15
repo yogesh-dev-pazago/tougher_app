@@ -117,9 +117,9 @@ app_license = "mit"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+    "Vehicle": "tougher_app.api.get_query_conditions_for_vehicle",
+}
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -137,34 +137,20 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"ToDo": {
+		"before_insert": "tougher_app.api.throw_emoji"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"tougher_app.tasks.all"
-# 	],
-# 	"daily": [
-# 		"tougher_app.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"tougher_app.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"tougher_app.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"tougher_app.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"weekly": [
+		"tougher_app.api.throw_emoji_final"
+	],
+}
 
 # Testing
 # -------

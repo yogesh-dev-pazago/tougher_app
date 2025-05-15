@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-05-14 11:32:59.260079",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride Booking",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hey, New Booking has arrived\n\n<a href = \"http://tougher:8000/app\">Click here to view </a>",
+ "message_type": "HTML",
+ "modified": "2025-05-14 11:32:59.260079",
+ "modified_by": "Administrator",
+ "module": "Tougher App",
+ "name": "New Booking Arrived",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.customer_name}} booked a vehicle"
+}
