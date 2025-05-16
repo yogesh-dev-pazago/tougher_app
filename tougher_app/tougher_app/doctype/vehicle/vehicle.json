@@ -21,7 +21,8 @@
   "route",
   "status",
   "condition",
-  "my_python_code"
+  "my_python_code",
+  "type"
  ],
  "fields": [
   {
@@ -118,6 +119,12 @@
    "fieldtype": "Check",
    "label": "Audit Completed ?",
    "permlevel": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Vehicle Type"
   }
  ],
  "grid_page_length": 50,
@@ -125,7 +132,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2025-05-15 12:14:10.784078",
+ "modified": "2025-05-15 15:24:04.799512",
  "modified_by": "Administrator",
  "module": "Tougher App",
  "name": "Vehicle",

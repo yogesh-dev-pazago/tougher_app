@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Driver(Document):
+class VehicleType(Document):
 	pass
